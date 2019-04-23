@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>TO DO List</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="layout.css">
+   <head>
+      <title>TODO Tracker</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="layout.css">
+   </head>
 
+   <body>
+      <center>
+         <div class="banner header">
+            <div class="header-title">TODO Tracker</div>
+         </div>
+      </center>
 
-</head>
-<body>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+         <ul class="navbar-nav ">
+            <li class="nav-item">
+               <a class="nav-link active" href="current_tasks.html">Aufgaben</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="edit_tasks.html">Aufgabe bearbeiten</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="new_task.html">Neue Aufgabe</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="impressum.html">Impressum</a>
+            </li>
+         </ul>
+      </nav>
 
-<center>
-<div class="banner header">
-  <div class="hero">
-    <div class="container">
-      <h1>TO DO Portal</h1>
-      <h2>Organizing made simple ;)</h2>
-    </div>
-  </div>
-</div>
-</center>
-
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
-    <ul class="navbar-nav ">
-      <li class="nav-item">
-        <a class="nav-link active" href="current_tasks.html">Aufgaben</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="edit_tasks.html">Aufgabe bearbeiten</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="new_task.html">Neue Aufgabe</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="impressum.html">Impressum</a>
-      </li>    
-    </ul>
-</nav>
-
-<div class="contents">
-	<table class="table table-striped table-bordered">
-<thead>
-    <tr>
-      <th scope="col">Aufgabe</th>
-      <th scope="col">Deadline</th>
-      <th scope="col">Progress</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-    </tr>
-</thead>
-<tbody>
-         <tr>
-            <td>Beispielseite mit dem Bootstrap Framework anlegen</td>
-            <td>25.April 2019</td>
-            <td>0%</td>
-            <td><a href="./edit_tasks.html"><button type="button" class="btn btn-outline-secondary">Bearbeiten</button></a></td>
-            <td><button type="button" class="btn btn-outline-danger">Löschen</button></td>
-         </tr>
-         <tr>
-            <td>Testing Responsiveness</td>
-            <td>24.April 2019</td>
-            <td>100%</td>
-            <td><a href="./edit_tasks.html"><button type="button" class="btn btn-outline-secondary">Bearbeiten</button></a></td>
-            <td><button type="button" class="btn btn-outline-danger">Löschen</button></td>
-         </tr>
-         <tr>
-            <td>Testing Performance</td>
-            <td>24.April 2019</td>
-            <td>68%</td>
-            <td><a href="./edit_tasks.html"><button type="button" class="btn btn-outline-secondary" href="#/edit_tasks">Bearbeiten</button></a></td>
-            <td><button type="button" class="btn btn-outline-danger">Löschen</button></td>
-         </tr>
-       </tbody>  
-      </table>
-</div>
+      <div class="contents">
+         <table class="table table-striped table-bordered">
+            <thead>
+               <tr>
+                  <th scope="col">Aufgabe</th>
+                  <th scope="col">Deadline</th>
+                  <th scope="col">Progress</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Beispielseite mit dem Bootstrap Framework anlegen</td>
+                  <td>25.04.2019</td>
+                  <td>0%</td>
+                  <td>
+                     <a href="./edit_tasks.html">
+                        <center><button type="button" class="btn btn-outline-secondary">Bearbeiten</button></center>
+                     </a>
+                  </td>
+                  <td>
+                     <center><button type="button" class="btn btn-outline-danger">Löschen</button></center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Testing Responsiveness</td>
+                  <td>24.04.2019</td>
+                  <td>100%</td>
+                  <td>
+                     <a href="./edit_tasks.html">
+                        <center><button type="button" class="btn btn-outline-secondary">Bearbeiten</button></center>
+                     </a>
+                  </td>
+                  <td>
+                     <center><button type="button" class="btn btn-outline-danger">Löschen</button></center>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Testing Performance</td>
+                  <td>24.04.2019</td>
+                  <td>68%</td>
+                  <td>
+                     <a href="./edit_tasks.html">
+                        <center><button type="button" class="btn btn-outline-secondary">Bearbeiten</button></center>
+                     </a>
+                  </td>
+                  <td>
+                     <center><button type="button" class="btn btn-outline-danger">Löschen</button></center>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      
    </body>
 </html>
