@@ -4,13 +4,13 @@ body {
 }
 
 .contents {
-  margin:70px;
+  margin:60px;
 }
 
 .header {
    background-image: url("bg.jpg");
   /*background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(40,156,186,1) 28%, rgba(117,124,244,1) 72%, rgba(0,212,255,1) 91%);
-  */padding:70px;
+  */padding:50px;
   background-position: center;
   background-size: cover;
 }
