@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>TODO Tracker</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="layout.css">
+   </head>
+
+   <body>
+      <center>
+         <div class="banner header">
+            <div class="header-title">TODO Tracker</div>
+         </div>
+      </center>
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+         <ul class="navbar-nav ">
+            <li class="nav-item">
+               <a class="nav-link" href="current_tasks.html">Aufgaben</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link active" href="edit_tasks.html">Aufgabe bearbeiten</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="new_task.html">Neue Aufgabe</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="impressum.html">Impressum</a>
+            </li>
+         </ul>
+      </nav>
+
+      <div class="contents">
+         <form>
+            <div class="form-group">
+               <label>Aufgabe:</label>
+               <input type="task" class="form-control" aria-describedby="task_restriction" placeholder="Aufgabenname eingeben" value="Beispiel zum Editieren">
+               <small id="task_restriction" class="form-text text-muted">Höchstens 160 Zeichen</small>
+            </div>
+            <div class="form-group">
+               <label>Deadline:</label>
+               <input type="date" class="form-control" placeholder="Deadline eingeben" value="20. April 2019" >
+               <small id="task_restriction" class="form-text text-muted">Format: dd. Month yyyy</small>
+            </div>
+            <div class="form-group">
+               <label>Progress:</label>
+               <div class="input-group mb-3">
+                  <input type="progress" class="form-control" placeholder="Progress in Prozenten eingeben" value="60">
+                  <div class="input-group-append">
+                     <span class="input-group-text" id="basic-addon3">%</span>
+                  </div>
+               </div>
+            </div>
+            <button type="button" class="btn btn-outline-primary">Speichern</button>
+         </form>
+      </div>
+
+   </body>
+</html>
