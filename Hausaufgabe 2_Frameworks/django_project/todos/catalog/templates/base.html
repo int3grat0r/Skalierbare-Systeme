@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>{% block title %}TODO Tracker{% endblock %}</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   </head>
+
+   <style>
+
+body {
+  background-color: rgb(240,240,240);
+  font-family:arial;
+}
+
+.contents {
+  margin:60px;
+}
+
+.header {
+   background:url('/static/bg.jpg');
+   padding:50px;
+   background-position: center;
+   background-size: cover;
+}
+
+.header-title {
+  font-size:45px;
+  font-family:Arial Black;
+  color: #ffffff;
+  padding:40px;
+  text-shadow: 4px 4px #404040;
+  font-weight: bold;
+}
+
+.datepicker {
+  font-family: Arial;
+  font-size:13.5px;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+/* This is the style of our error messages */
+.error {
+  width  : 100%;
+  padding: 0;
+ 
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+ 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
+</style>
+
+   <body>
+      <center>
+         <div class="banner header">
+            <div class="header-title">TODO Tracker</div>
+         </div>
+      </center>
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+         <ul class="navbar-nav ">
+            <li class="nav-item">
+               <a class="nav-link" href={% url 'index' %}>Aufgaben</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href={% url 'page_edit_task' %}>Aufgabe bearbeiten</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href={% url 'page_new_task' %}>Neue Aufgabe</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href={% url 'page_impressum' %}>Impressum</a>
+            </li>
+         </ul>
+      </nav>
+
+      {% block content %}{% endblock %}
+
+   </body>
+</html>
