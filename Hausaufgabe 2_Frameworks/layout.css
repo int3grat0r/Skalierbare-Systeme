@@ -4,19 +4,49 @@ body {
 }
 
 .contents {
-  margin:70px;
+  margin:60px;
 }
 
 .header {
-  background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(40,156,186,1) 28%, rgba(117,124,244,1) 72%, rgba(0,212,255,1) 91%);
-  padding:5px;
+   background-image: url("bg.jpg");
+  /*background: linear-gradient(27deg, rgba(255,255,255,1) 0%, rgba(40,156,186,1) 28%, rgba(117,124,244,1) 72%, rgba(0,212,255,1) 91%);
+  */padding:50px;
+  background-position: center;
+  background-size: cover;
 }
 
 .header-title {
   font-size:45px;
   font-family:Arial Black;
   color: #ffffff;
-  padding:30px;
+  padding:40px;
   text-shadow: 4px 4px #404040;
   font-weight: bold;
+}
+
+.datepicker {
+  font-family: Arial;
+  font-size:13.5px;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+/* This is the style of our error messages */
+.error {
+  width  : 100%;
+  padding: 0;
+ 
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+ 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
 }
