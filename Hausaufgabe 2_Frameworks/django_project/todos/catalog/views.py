@@ -26,6 +26,8 @@ def page_impressum(request):
 
 def new(request):
 	# todo
+	elem.save()
+    return HttpResponseRedirect('/catalog/')
 
 def edit(request, pk):
     elem = Todo.objects.get(pk = pk)
@@ -39,7 +41,6 @@ def edit(request, pk):
 
 def delete(request, pk):
    elem = Todo.objects.get(pk = pk)
-   print(elem.name)
    elem.delete()
    return HttpResponseRedirect('/catalog/')
 
