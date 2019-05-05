@@ -33,13 +33,24 @@ def page_new_task(request):
 	        post.progress = form.cleaned_data['progress']
 	        post.save()
 	        return HttpResponseRedirect('/catalog/')
+        # todo errors
     else:
-    	# todo errors
         form = TodoForm()
     return render(request, 'page_new_task.html', {'form': form})
 
-def page_edit_task(request):
-	return render(request, 'page_edit_task.html')
-
-
+def page_edit_task(request, pk):
+    post = get_object_or_404(Todo, pk=pk)
+    if request.method == "POST":
+        form = TodoForm(request.POST, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.name = form.cleaned_data['name']
+            post.deadline = form.cleaned_data['deadline']
+            post.progress = form.cleaned_data['progress']
+            post.save()
+            return HttpResponseRedirect('/catalog/')
+        # todo errors
+    else:
+        form = TodoForm(instance=post)
+    return render(request, 'page_edit_task.html', {'form': form})
 
