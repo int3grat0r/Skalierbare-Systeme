@@ -15,33 +15,31 @@ def index(request):
     }
     return render(request, 'index.html', context=context)
 
-def page_new_task(request):
-	return render(request, 'page_new_task.html')
-
-def page_edit_task(request):
-	return render(request, 'page_edit_task.html')
-
 def page_impressum(request):
 	return render(request, 'page_impressum.html')
-
-def new(request):
-	# todo
-	elem.save()
-	return HttpResponseRedirect('/catalog/')
-
-def edit(request, pk):
-	elem = Todo.objects.get(pk = pk)
-	# todo
-	# load in form
-	# edit
-
-	elem.save()
-	# render???? context?
-	return HttpResponseRedirect('/catalog/')
 
 def delete(request, pk):
 	elem = Todo.objects.get(pk = pk)
 	elem.delete()
 	return HttpResponseRedirect('/catalog/')
+
+def page_new_task(request):
+    if request.method == "POST":
+        form = TodoForm(request.POST)
+        if form.is_valid():
+	        post = form.save(commit=False)
+	        post.name = form.cleaned_data['name']
+	        post.deadline = form.cleaned_data['deadline']
+	        post.progress = form.cleaned_data['progress']
+	        post.save()
+	        return HttpResponseRedirect('/catalog/')
+    else:
+    	# todo errors
+        form = TodoForm()
+    return render(request, 'page_new_task.html', {'form': form})
+
+def page_edit_task(request):
+	return render(request, 'page_edit_task.html')
+
 
 
