@@ -27,21 +27,21 @@ def page_impressum(request):
 def new(request):
 	# todo
 	elem.save()
-    return HttpResponseRedirect('/catalog/')
+	return HttpResponseRedirect('/catalog/')
 
 def edit(request, pk):
-    elem = Todo.objects.get(pk = pk)
-    # todo
-    # load in form
-    # edit
+	elem = Todo.objects.get(pk = pk)
+	# todo
+	# load in form
+	# edit
 
-    elem.save()
-    # render???? context?
-    return HttpResponseRedirect('/catalog/')
+	elem.save()
+	# render???? context?
+	return HttpResponseRedirect('/catalog/')
 
 def delete(request, pk):
-   elem = Todo.objects.get(pk = pk)
-   elem.delete()
-   return HttpResponseRedirect('/catalog/')
+	elem = Todo.objects.get(pk = pk)
+	elem.delete()
+	return HttpResponseRedirect('/catalog/')
 
 
