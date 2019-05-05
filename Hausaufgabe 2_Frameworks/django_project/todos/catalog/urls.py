@@ -26,6 +26,7 @@ urlpatterns = [
 from django.urls import path
 from django.conf.urls import url
 from . import views
+from django.conf.urls import *
 
 from django.views.generic import TemplateView
 
@@ -34,9 +35,8 @@ urlpatterns = [
     path('page_edit_task/', views.page_edit_task, name ='page_edit_task'),
     path('page_new_task/', views.page_new_task, name ='page_new_task'),
     path('page_impressum/', views.page_impressum, name ='page_impressum'),
-    path('page_edit_task/<int:id>/', views.page_edit_task),
+    url(r'^delete/(?P<pk>\d+)/$', views.delete, name='delete')
 ]
-
 
 
 

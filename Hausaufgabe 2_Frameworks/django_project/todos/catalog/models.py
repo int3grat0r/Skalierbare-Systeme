@@ -16,4 +16,5 @@ class Todo(models.Model):
 		return self.name
 
 	def get_absolute_url(self):
+		# todo
 		return reverse('model-detail-view', args=[str(self.id)])
