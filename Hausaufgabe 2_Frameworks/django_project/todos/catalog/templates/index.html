@@ -21,11 +21,10 @@
                   <td>{{ todo.deadline }}</td>
                   <td>{{ todo.progress }} % </td>
                   <td>
-                        <center><button type="button" class="btn btn-outline-secondary">Bearbeiten</button></center>
-                     </a>
+                         <center><a role="button" class="btn btn-outline-secondary" href="{% url 'page_edit_task' todo.pk %}">Bearbeiten</a></center>
                   </td>
                   <td>
-                     <center><a role="button" class="btn btn-outline-danger " href="{% url 'delete' todo.id %}">Löschen</a></center>
+                     <center><a role="button" class="btn btn-outline-danger " href="{% url 'delete' todo.pk %}">Löschen</a></center>
 
                   </td>
                </tr>

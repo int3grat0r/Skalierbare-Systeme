@@ -33,9 +33,10 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('', views.index, name ='index'),
     path('page_edit_task/', views.page_edit_task, name ='page_edit_task'),
-    path('page_new_task/', views.page_new_task, name ='page_new_task'),
     path('page_impressum/', views.page_impressum, name ='page_impressum'),
     url(r'^delete/(?P<pk>\d+)/$', views.delete, name='delete'),
-    path('page_new_task/', views.page_new_task, name='page_new_task'),]
+    path('page_edit_task/<int:pk>/', views.page_edit_task, name='page_edit_task'),
+    path('page_new_task/', views.page_new_task, name='page_new_task')
+    ]
 
 
