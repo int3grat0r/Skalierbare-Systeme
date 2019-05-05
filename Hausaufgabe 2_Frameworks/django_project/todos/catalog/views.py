@@ -26,44 +26,16 @@ def index(request):
 def page_new_task(request):
 	return render(request, 'page_new_task.html')
 
-"""
 def page_edit_task(request):
 	return render(request, 'page_edit_task.html')
-"""
+
 def page_impressum(request):
 	return render(request, 'page_impressum.html')
 
-"""
-from .forms import TodoForm
-def todo_new(request):
-    if request.method == "POST":
-        form = TodoForm(request.POST)
-        if form.is_valid():
-            todo = form.save(commit=False)
-            todo.name = request.name
-            todo.save()
-            return redirect('page_new_task', id=todo.id)
-    else:
-        form = TodoForm()
-    return render(request, 'page_new_task', {'form': form})
-
-def todo_edit(request, id):
-    todo = get_object_or_404(Todo, id=id)
-    if request.method == "POST":
-        form = TodoForm(request.POST, instance=todo)
-        if form.is_valid():
-            todo = form.save(commit=False)
-            todo.name = request.name
-            todo.save()
-            return redirect('page_edit_task', id=todo.id)
-    else:
-        form = TodoForm(instance=post)
-    return render(request, 'page_edit_task', {'form': form})
-"""
-def page_edit_task(request, id):
-    item = Todo.objects.get(pk=id)
-    if request.method == 'POST':
-        form = EditItemForm(request.POST, instance=item)
-
+def delete(request, pk):
+   elem = Todo.objects.get(pk = pk)
+   print(elem.name)
+   elem.delete()
+   return HttpResponseRedirect('/catalog/')
 
 

@@ -16,4 +16,4 @@ class Todo(models.Model):
 		return self.name
 
 	def get_absolute_url(self):
-		return reverse('model-detail-view', args=[str(self.id)])
+		return reverse('page_edit_task', args=[str(self.id)])
