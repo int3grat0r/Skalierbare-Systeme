@@ -37,14 +37,52 @@ body {
 
 .datepicker {
   font-family: Arial;
-  font-size:13.5px;
+  font-size:15px;
+  padding:10px;
+  text-align: center;
+}
+
+.datepicker-dropdown {
+padding: 15px;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused {
+  background: #909090;
+  cursor: pointer;
+ 
+}
+
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #808080;
+}
+
+.datepicker table tr td.today {
+  color: #184830;
+  background-color: #FFA953;
+  border-color: #FFB76F; 
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+text-align: center;
+width: 30px;
+height: 30px;
+border-radius: 4px;
+}
+
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover {
+cursor: pointer;
+background: #909090;
 }
 
 input:invalid {
   box-shadow: 0 0 5px 1px red;
 }
 
-/* This is the style of our error messages */
 .error {
   width  : 100%;
   padding: 0;
