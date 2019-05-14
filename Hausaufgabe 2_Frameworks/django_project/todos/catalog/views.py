@@ -33,7 +33,6 @@ def page_new_task(request):
 	        post.progress = form.cleaned_data['progress']
 	        post.save()
 	        return HttpResponseRedirect('/catalog/')
-        # todo errors
     else:
         form = TodoForm()
     return render(request, 'page_new_task.html', {'form': form})
@@ -49,8 +48,6 @@ def page_edit_task(request, pk):
             post.progress = form.cleaned_data['progress']
             post.save()
             return HttpResponseRedirect('/catalog/')
-        # todo errors
     else:
         form = TodoForm(instance=post)
     return render(request, 'page_edit_task.html', {'form': form})
-

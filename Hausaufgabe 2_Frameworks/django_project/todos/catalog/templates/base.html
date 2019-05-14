@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
    <head>
       <title>{% block title %}TODO Tracker{% endblock %}</title>
       <meta charset="utf-8">
@@ -10,97 +11,92 @@
 
    <style>
 
-body {
-  background-color: rgb(240,240,240);
-  font-family:arial;
-}
+      body {
+        background-color: rgb(240,240,240);
+        font-family:arial;
+      }
 
-.contents {
-  margin:60px;
-}
+      .contents {
+        margin:60px;
+      }
 
-.header {
-   background:url('/static/bg.jpg');
-   padding:50px;
-   background-position: center;
-   background-size: cover;
-}
+      .header {
+        background:url('/static/bg.jpg');
+        padding:50px;
+        background-position: center;
+        background-size: cover;
+      }
 
-.header-title {
-  font-size:45px;
-  font-family:Arial Black;
-  color: #ffffff;
-  padding:40px;
-  text-shadow: 4px 4px #404040;
-  font-weight: bold;
-}
+      .header-title {
+        font-size:45px;
+        font-family:Arial Black;
+        color: #ffffff;
+        padding:40px;
+        text-shadow: 4px 4px #404040;
+        font-weight: bold;
+      }
 
-.datepicker {
-  font-family: Arial;
-  font-size:15px;
-  padding:10px;
-  text-align: center;
-}
+      .datepicker {
+        font-family: Arial;
+        font-size:15px;
+        padding:10px;
+        text-align: center;
+      }
 
-.datepicker-dropdown {
-padding: 15px;
-}
+      .datepicker-dropdown {
+        padding: 15px;
+      }
 
-.datepicker table tr td.day:hover,
-.datepicker table tr td.focused {
-  background: #909090;
-  cursor: pointer;
- 
-}
+      .datepicker table tr td.day:hover,
+      .datepicker table tr td.focused {
+        background: #909090;
+        cursor: pointer;
+      }
 
-.datepicker table tr td.old,
-.datepicker table tr td.new {
-  color: #808080;
-}
+      .datepicker table tr td.old,
+      .datepicker table tr td.new {
+        color: #808080;
+      }
 
-.datepicker table tr td.today {
-  color: #184830;
-  background-color: #FFA953;
-  border-color: #FFB76F; 
-}
+      .datepicker table tr td.today {
+        color: #184830;
+        background-color: #FFA953;
+        border-color: #FFB76F; 
+      }
 
-.datepicker table tr td,
-.datepicker table tr th {
-text-align: center;
-width: 30px;
-height: 30px;
-border-radius: 4px;
-}
+      .datepicker table tr td,
+      .datepicker table tr th {
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+      }
 
-.datepicker .prev:hover,
-.datepicker .next:hover,
-.datepicker tfoot tr th:hover {
-cursor: pointer;
-background: #909090;
-}
+      .datepicker .prev:hover,
+      .datepicker .next:hover,
+      .datepicker tfoot tr th:hover {
+        cursor: pointer;
+        background: #909090;
+      }
 
-input:invalid {
-  box-shadow: 0 0 5px 1px red;
-}
+      input:invalid {
+        box-shadow: 0 0 5px 1px red;
+      }
 
-.error {
-  width  : 100%;
-  padding: 0;
- 
-  font-size: 80%;
-  color: white;
-  background-color: #900;
-  border-radius: 0 0 5px 5px;
- 
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.error.active {
-  padding: 0.3em;
-}
-
-</style>
+      .error {
+      width  : 100%;
+      padding: 0;
+      font-size: 80%;
+      color: white;
+      background-color: #900;
+      border-radius: 0 0 5px 5px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      }
+      .error.active {
+      padding: 0.3em;
+      }
+   </style>
 
    <body>
       <center>
@@ -113,9 +109,6 @@ input:invalid {
          <ul class="navbar-nav ">
             <li class="nav-item">
                <a class="nav-link" href={% url 'index' %}>Aufgaben</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href={% url 'page_edit_task' %}>Aufgabe bearbeiten</a>
             </li>
             <li class="nav-item">
                <a class="nav-link" href={% url 'page_new_task' %}>Neue Aufgabe</a>
